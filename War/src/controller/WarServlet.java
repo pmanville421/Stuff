@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Card;
+import model.Deck;
+
 /**
  * Servlet implementation class WarServlet
  */
