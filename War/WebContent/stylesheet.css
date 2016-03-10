@@ -12,13 +12,45 @@ h1{
 
 
 
-div.form {
+form {
     background-color:black;
     color:white;
     margin:20px;
     padding:20px;
 }	
 
-div.img {
-  text-align:center;
+img {
+	margin-right: auto;
+	margin-left: auto;
+	display:block;
 }
+
+.instructions {
+	
+	color: red;
+    text-align: center;
+}
+
+
+
+
+.playerName
+    {
+    display: block;
+    background-color: black;
+    width: 100px;
+    float: left;
+    padding: 25px;
+    }
+
+.title
+    {
+    font-weight: bold;
+    color: blue;
+    }
+
+input
+    {
+    border: 1px solid gray;
+    font-size: 1.1em;
+    }
