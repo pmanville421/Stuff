@@ -17,12 +17,9 @@
   
   
   
-<div class="playerName">
+<div class="nameBlock">
     <div class="title">Player 1:</div>
     <input id="player"size="15"/>
-</div>
-    
-<div class="playerName">
     <div class="title">Player 2:</div>
     <input id="contact"size="15"/>
 </div>

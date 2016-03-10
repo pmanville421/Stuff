@@ -34,23 +34,18 @@ img {
 
 
 
-.playerName
-    {
-    display: block;
-    background-color: black;
-    width: 100px;
-    float: left;
-    padding: 25px;
+.nameBlock {
+    margin-right: auto;
+	margin-left: auto;
+	display:block;
     }
 
-.title
-    {
+.title {
     font-weight: bold;
     color: blue;
     }
 
-input
-    {
+input {
     border: 1px solid gray;
     font-size: 1.1em;
     }
