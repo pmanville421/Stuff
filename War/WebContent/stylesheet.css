@@ -34,18 +34,4 @@ img {
 
 
 
-.nameBlock {
-    margin-right: auto;
-	margin-left: auto;
-	display:block;
-    }
 
-.title {
-    font-weight: bold;
-    color: blue;
-    }
-
-input {
-    border: 1px solid gray;
-    font-size: 1.1em;
-    }
