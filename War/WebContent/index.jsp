@@ -17,10 +17,21 @@
   
   
   
-
+<div align="center" style="margin-top: 50px;">
+ 
+ <form name="" action="" method="post">
+		
+<div class="footer">
+	<label> P1 Name: <input type="text" name="player1" />
+		    P2 Name: <input type="text" name="player2" />
+	</label>
+		<p class="submit"><input type="submit" name="start" value="START!"></p>
+		
+</div>
+</form>
 
      
-   
+</div>   
 
 </body>
 </html>
