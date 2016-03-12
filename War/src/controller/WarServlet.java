@@ -9,13 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Card;
-import model.Deck;
+import model.Player;
 
 /**
  * Servlet implementation class WarServlet
  */
-@WebServlet("/WarServlet")
+@WebServlet(description = "A servlet for my War game", urlPatterns = { "/doPlay" })
 public class WarServlet extends HttpServlet implements Serializable {
 	private static final long serialVersionUID = 1L;
        
@@ -48,6 +47,8 @@ public class WarServlet extends HttpServlet implements Serializable {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		
 	}
 
+	
 }
