@@ -10,7 +10,7 @@ public class Player implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private Hand hand;
-
+	private int score;
 	/**
 	 * @param name
 	 * @param hand
@@ -19,6 +19,7 @@ public class Player implements Serializable{
 		super();
 		this.name = name;
 		this.hand = hand;
+		this.score = 0;
 	}
 
 	public String getName() {
@@ -37,5 +38,11 @@ public class Player implements Serializable{
 		this.hand = hand;
 	}
 	
-	
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore() {
+		this.score = 0;
+	}
 }
