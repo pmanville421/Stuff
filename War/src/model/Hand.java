@@ -3,7 +3,7 @@ package model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Hand implements Serializable{
+public class Hand extends Deck implements Serializable{
 
 	/**
 	 * 
@@ -27,8 +27,8 @@ public class Hand implements Serializable{
 	
 	public void decreaseHand(){
 		this.cards.remove(0);
+		
+	
 	}
-	
-	
 	
 }

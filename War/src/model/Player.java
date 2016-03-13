@@ -1,48 +1,81 @@
+/**
+ * 
+ */
 package model;
 
 import java.io.Serializable;
 
-public class Player implements Serializable{
+/**
+ * @author plm12
+ *
+ */
+public class Player implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private String name;
-	private Hand hand;
 	private int score;
+	private Deck hand;
 	/**
 	 * @param name
+	 * @param score
 	 * @param hand
 	 */
-	public Player(String name, Hand hand) {
-		super();
+	public Player(String name, int score, Deck hand) {
 		this.name = name;
+		this.score = score;
 		this.hand = hand;
-		this.score = 0;
+	}
+	
+	public Player(){ 
+	 name = "";
+     score = 0;
+     hand = null;
+		
 	}
 
+	/**
+	 * @return the name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @param name the name to set
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public Hand getHand() {
-		return hand;
-	}
-
-	public void setHand(Hand hand) {
-		this.hand = hand;
-	}
-	
+	/**
+	 * @return the score
+	 */
 	public int getScore() {
 		return score;
 	}
 
-	public void setScore() {
-		this.score = 0;
+	/**
+	 * @param score the score to set
+	 */
+	public void setScore(int score) {
+		this.score = score;
 	}
+
+	/**
+	 * @return the hand
+	 */
+	public Deck getHand() {
+		return hand;
+	}
+
+	/**
+	 * @param hand the hand to set
+	 */
+	public void setHand(Deck hand) {
+		this.hand = hand;
+	}
+	
+	//Create and add the hand
+	
+	
+	
 }
