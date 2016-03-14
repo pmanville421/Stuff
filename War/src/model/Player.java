@@ -18,22 +18,22 @@ public class Player implements Serializable {
 	
 	private String name;
 	private int cardsScore;
-	private Deck hand;
+	private Deck deck;
 	/**
 	 * @param name
 	 * @param cardsScore
 	 * @param hand
 	 */
-	public Player(String name, int cardsScore, Deck hand) {
+	public Player(String name, int cardsScore, Deck deck) {
 		this.name = name;
 		this.cardsScore = cardsScore;
-		this.hand = hand;
+		this.deck = deck;
 	}
 	
 	public Player(){ 
 	 name = "";
      cardsScore = 0;
-     hand = null;
+     deck = null;
 		
 	}
 
@@ -68,18 +68,17 @@ public class Player implements Serializable {
 	/**
 	 * @return the hand
 	 */
-	public Deck getHand() {
-		return hand;
+	public Deck getDeck() {
+		return deck;
 	}
 
 	/**
 	 * @param hand the hand to set
 	 */
-	public void setHand(Deck hand) {
-		this.hand = hand;
+	public void setDeck(Deck deck) {
+		this.deck = deck;
 	}
 	
-	//Create and add the hand
 	
 	
 	
