@@ -11,23 +11,28 @@ import java.io.Serializable;
  */
 public class Player implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private String name;
-	private int score;
+	private int cardsScore;
 	private Deck hand;
 	/**
 	 * @param name
-	 * @param score
+	 * @param cardsScore
 	 * @param hand
 	 */
-	public Player(String name, int score, Deck hand) {
+	public Player(String name, int cardsScore, Deck hand) {
 		this.name = name;
-		this.score = score;
+		this.cardsScore = cardsScore;
 		this.hand = hand;
 	}
 	
 	public Player(){ 
 	 name = "";
-     score = 0;
+     cardsScore = 0;
      hand = null;
 		
 	}
@@ -47,17 +52,17 @@ public class Player implements Serializable {
 	}
 
 	/**
-	 * @return the score
+	 * @return the cardsScore
 	 */
-	public int getScore() {
-		return score;
+	public int getcardsScore() {
+		return cardsScore;
 	}
 
 	/**
-	 * @param score the score to set
+	 * @param cardsScore the cardsScore to set
 	 */
-	public void setScore(int score) {
-		this.score = score;
+	public void setcardsScore(int cardsScore) {
+		this.cardsScore = cardsScore;
 	}
 
 	/**

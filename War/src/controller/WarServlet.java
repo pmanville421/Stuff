@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class WarServlet extends HttpServlet implements Serializable {
 	private static final long serialVersionUID = 1L;
        
+	public Player p1 = null;
    
     public WarServlet() {
         super();
