@@ -2,6 +2,8 @@ package controller;
 
 import java.io.IOException;
 import java.io.Serializable;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import model.Player;
 import model.Deck;
 import model.Card;
+import model.PlayWar;
 
 /**
  * Servlet implementation class WarServlet
@@ -23,10 +26,12 @@ import model.Card;
 public class WarServlet extends HttpServlet implements Serializable {
 	private static final long serialVersionUID = 1L;
        
-	public Player p1 = null;
-	public Player p2 = null;
-    public Deck hand; 
+	public Player player1 = null;
+	public Player player2 = null;
+    public Deck deck; 
 	public boolean start = false;
+
+	
 	
     public WarServlet() {
         super();
@@ -57,15 +62,26 @@ public class WarServlet extends HttpServlet implements Serializable {
 
 	String url = null;
 	
-	if(p1 == null && p2 == null){
+	if(player1 == null && player2 == null){
 		
-		String p1Name = request.getParameter("player1");
-		String p2Name = request.getParameter("player2");
-		this.p1 = new Player(p1Name, 0, hand);
-		this.p1 = new Player(p2Name, 0, hand);
-
+		String player1Name = request.getParameter("player1");
+		String player2Name = request.getParameter("player2");
+		this.player1 = new Player(player1Name, 0, deck);
+		this.player2 = new Player(player2Name, 0, deck);
+		deck = new Deck();
+		playGame();
+		
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(url); 
+		dispatcher.forward(request, response);
 		}
 
+	}
+
+
+	private void playGame() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

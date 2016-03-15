@@ -164,6 +164,13 @@ public class Deck implements Serializable {
 		return deck;
 	}
 	
+	
+	//Splits deck
+	
+	
+	
+	
+	
 	/**
 	 * sets the deck to a predetermined order - useful for testing
 	 */	
@@ -196,6 +203,8 @@ public class Deck implements Serializable {
 			this.cards.add(c);
 		
 			System.out.println(c.getCardString());
-		}
+		}	
 	}
+
+	
 }
