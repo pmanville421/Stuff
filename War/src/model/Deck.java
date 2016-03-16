@@ -165,11 +165,6 @@ public class Deck implements Serializable {
 	}
 	
 	
-	//Splits deck
-	
-	
-	
-	
 	
 	/**
 	 * sets the deck to a predetermined order - useful for testing
@@ -205,6 +200,12 @@ public class Deck implements Serializable {
 			System.out.println(c.getCardString());
 		}	
 	}
+
+	public Deck splitDeck() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 	
 }

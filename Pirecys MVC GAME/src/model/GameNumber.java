@@ -73,3 +73,41 @@ public class GameNumber {
 	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Methods
+
+	//Deal Deck to players
+
+/*public void deal(Deck deck){
+for (int i = 0; i < 25; i++); 
+
+}*/
+	//Compare values of topcards
+
+
+			//Decide winner from deal
+	
+			//remove top cards
+	
+			//add removed cards to value of playerScore if the player won the deal
+	
+			//else WAR!
+	
+			//war stuff here
+	
+			//add three cards then do deal else keep going, else game end
+	
+			//if no more cards, highest playerScore wins!
+	

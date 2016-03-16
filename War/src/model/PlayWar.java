@@ -8,28 +8,40 @@ public class PlayWar implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Deck player1Deck;
-	private Deck player2Deck;
-	/**
-	 * @param player1Deck
-	 * @param player2Deck
-	 */
-	public PlayWar(Deck player1Deck, Deck player2Deck) {
-		super();
-		this.player1Deck = player1Deck;
-		this.player2Deck = player1Deck.splitDeck();
+	private Player player1 = new Player();
+	private Player player2 = new Player();
+	
+	
+	
+	//Methods
+
+		//Deal Deck to players
+
+	public void deal(Deck deck){
+	for (int i = 0; i < 25; i++){
 	}
-	public Deck getPlayer1Deck() {
-		return player1Deck;
+
 	}
-	public void setPlayer1Deck(Deck player1Deck) {
-		this.player1Deck = player1Deck;
+		//Compare values of topcards
+
+	public void drawTop(){
+	
 	}
-	public Deck getPlayer2Deck() {
-		return player2Deck;
-	}
-	public void setPlayer2Deck(Deck player2Deck) {
-		this.player2Deck = player2Deck;
-	}
-	//Comparison goes here
+				//Decide winner from deal
+
+
+				//remove top cards
+
+
+
+				//add removed cards to value of playerScore if the player won the deal
+		
+				//else WAR!
+		
+				//war stuff here
+		
+				//add three cards then do deal else keep going, else game end
+		
+				//if no more cards, highest playerScore wins!
+	
 }

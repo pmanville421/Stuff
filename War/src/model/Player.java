@@ -16,70 +16,89 @@ public class Player implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private String name;
-	private int cardsScore;
-	private Deck deck;
+	private String playerName;
+	private Deck playerHand;
+	private int playerScore;
 	/**
 	 * @param name
-	 * @param cardsScore
-	 * @param hand
 	 */
-	public Player(String name, int cardsScore, Deck deck) {
-		this.name = name;
-		this.cardsScore = cardsScore;
-		this.deck = deck;
+	/**
+	 * @param playerName 
+	 * @param playerName
+	 * @param playerHand
+	 * @param playerScore
+	 */
+	public Player(String playerName) {
+		this.playerName = playerName;
+		setPlayerScore (0);
+		playerHand = new Deck();
 	}
-	
-	public Player(){ 
-	 name = "";
-     cardsScore = 0;
-     deck = null;
-		
+    public Player(){
+    	setPlayerScore (0);
+    	playerHand = new Deck();
+    	
+    }
+	/**
+	 * @return the playerName
+	 */
+	public String getPlayerName() {
+		return playerName;
+	}
+	/**
+	 * @param playerName the playerName to set
+	 */
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+	/**
+	 * @return the playerHand
+	 */
+	public Deck getPlayerHand() {
+		return playerHand;
+	}
+	/**
+	 * @param playerHand the playerHand to set
+	 */
+	public void setPlayerHand(Deck playerHand) {
+		this.playerHand = playerHand;
+	}
+	/**
+	 * @return the playerScore
+	 */
+	public int getPlayerScore() {
+		return playerScore;
+	}
+	/**
+	 * @param playerScore the playerScore to set
+	 */
+	public void setPlayerScore(int playerScore) {
+		this.playerScore = playerScore;
 	}
 
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
 
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
+	public void getHand(Deck deck){
+		this.playerHand = deck;
 	}
-
-	/**
-	 * @return the cardsScore
-	 */
-	public int getcardsScore() {
-		return cardsScore;
-	}
-
-	/**
-	 * @param cardsScore the cardsScore to set
-	 */
-	public void setcardsScore(int cardsScore) {
-		this.cardsScore = cardsScore;
-	}
-
-	/**
-	 * @return the hand
-	 */
-	public Deck getDeck() {
-		return deck;
-	}
-
-	/**
-	 * @param hand the hand to set
-	 */
-	public void setDeck(Deck deck) {
-		this.deck = deck;
-	}
-	
-	
-	
 	
 }
+
+
+/*public void deal(Player player1, Player player2){
+Deck deck1,deck2;
+deck1 = new Deck();
+deck2 = new Deck();
+
+gameDeck.newDeck();
+gameDeck.shuffleDeck();
+
+System.out.println(this.gameDeck.toString());
+
+while( gameDeck.getCardsLeft() > 0 ){
+	deck1.addCard(gameDeck.removeCard());
+	deck2.addCard(gameDeck.removeCard());
+}
+
+player1.addDrawDeck(deck1);
+player2.addDrawDeck(deck2);;
+
+}*/

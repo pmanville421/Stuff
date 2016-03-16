@@ -66,8 +66,6 @@ public class WarServlet extends HttpServlet implements Serializable {
 		
 		String player1Name = request.getParameter("player1");
 		String player2Name = request.getParameter("player2");
-		this.player1 = new Player(player1Name, 0, deck);
-		this.player2 = new Player(player2Name, 0, deck);
 		deck = new Deck();
 		playGame();
 		
