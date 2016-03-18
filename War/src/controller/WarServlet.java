@@ -13,25 +13,22 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.Player;
-import model.Deck;
-import model.Card;
+//import model.Deck;
+//import model.Card;
 
 /**
  * Servlet implementation class WarServlet
  */
 @WebServlet(
 		description = "This servlet runs the game.", 
-		urlPatterns = { 
-				"/WarServlet", 
-				"/doPlay", 
-				"/dofightRegular",
-				"/doWar"
-		})
+		urlPatterns = {"/WarServlet","doPlay", "/doWar"})
+
 public class WarServlet extends HttpServlet implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Player player1;
 	private Player player2;
-	private Deck playerDeck;
+	//private Deck playerDeck;
+	public Object action;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -48,17 +45,14 @@ public class WarServlet extends HttpServlet implements Serializable {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		
 
 		HttpSession session = request.getSession();
 
@@ -66,27 +60,37 @@ public class WarServlet extends HttpServlet implements Serializable {
 
 		//Start a session and create/get players & names//
 		
-		String url = "index.jsp";
+		String url = null;
+		String action = request.getParameter("action");
 		if(player1 == null && player2 == null){
-			
+		
+		
 		String playerName1 = request.getParameter("player1");	
 		String playerName2 = request.getParameter("player2");	
 		
-		
+		//Our player are created
 		this.player1 = new Player(playerName1);
 		this.player2 = new Player(playerName2);
 		
 		
+		
+		
+		
 		//Deal Deck to players and create their decks//
-
 		
 
+		
+		
+		
 
 		// setting our attributes to be sent back to next fightWar JSP// 
 		
-		url = "/fightRegular.jsp";
+		
+		if(action.equals("doPlay")){
+			url = "/fightRegular.jsp";
 		session.setAttribute("playerName1", this.player1.getPlayerName());
 		session.setAttribute("playerName2", this.player2.getPlayerName());
+		}
 		//session.setAttribute("playerScore2", this.player1.getPlayerScore());
 		//session.setAttribute("playerScore2", this.player2.getPlayerScore());
 
@@ -124,9 +128,9 @@ public class WarServlet extends HttpServlet implements Serializable {
 			
 					//if no more cards, highest playerScore wins!
 		
-	}
-
-
 	
+
+
+	}
 	
 }

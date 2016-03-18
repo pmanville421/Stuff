@@ -11,8 +11,8 @@
 <h1><span style="color:#0066ff">THIS</span> IS WAR! (<span style="color:#0066ff">The Card Game</span>)</h1>
 
 
-<div>${sessionScope.playerName1}
-${sessionScope.playerName2}</div>
+<div>${sessionScope.playerName1}</div>
+<div>${sessionScope.playerName2}</div>
 
 
 </body>

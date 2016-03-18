@@ -25,7 +25,7 @@
   
 <div align="center" style="margin-top: 50px;">
  
- <form name="playWar" action="doPlay" method="get">
+ <form name="playGame" action="doPlay" method="get">
 		
 <div class="footer">
 	<label> 
