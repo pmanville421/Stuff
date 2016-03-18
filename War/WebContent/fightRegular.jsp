@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Regular Battle JSP</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 <body>
+<h1><span style="color:#0066ff">THIS</span> IS WAR! (<span style="color:#0066ff">The Card Game</span>)</h1>
+
+
+<div>${sessionScope.playerName1}
+${sessionScope.playerName2}</div>
+
 
 </body>
 </html>

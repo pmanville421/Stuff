@@ -75,30 +75,13 @@ public class Player implements Serializable {
 		this.playerScore = playerScore;
 	}
 
-
+	
 	public void getHand(Deck deck){
 		this.playerHand = deck;
+		
 	}
+	
+	
 	
 }
 
-
-/*public void deal(Player player1, Player player2){
-Deck deck1,deck2;
-deck1 = new Deck();
-deck2 = new Deck();
-
-gameDeck.newDeck();
-gameDeck.shuffleDeck();
-
-System.out.println(this.gameDeck.toString());
-
-while( gameDeck.getCardsLeft() > 0 ){
-	deck1.addCard(gameDeck.removeCard());
-	deck2.addCard(gameDeck.removeCard());
-}
-
-player1.addDrawDeck(deck1);
-player2.addDrawDeck(deck2);;
-
-}*/
