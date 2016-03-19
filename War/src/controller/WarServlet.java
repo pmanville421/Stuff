@@ -21,14 +21,14 @@ import model.Player;
  */
 @WebServlet(
 		description = "This servlet runs the game.", 
-		urlPatterns = {"/WarServlet","doPlay", "/doWar"})
+		urlPatterns = {"/WarServlet","/doPlay", "/doWar"})
 
 public class WarServlet extends HttpServlet implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Player player1;
 	private Player player2;
-	//private Deck playerDeck;
-	public Object action;
+	private boolean warChallenge = true;
+	private boolean warWinner = true;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -45,7 +45,10 @@ public class WarServlet extends HttpServlet implements Serializable {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		this.doPost(request, response);
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -61,53 +64,60 @@ public class WarServlet extends HttpServlet implements Serializable {
 		//Start a session and create/get players & names//
 		
 		String url = null;
-		String action = request.getParameter("action");
 		if(player1 == null && player2 == null){
 		
 		
 		String playerName1 = request.getParameter("player1");	
 		String playerName2 = request.getParameter("player2");	
 		
-		//Our player are created
+		//Our players are created
 		this.player1 = new Player(playerName1);
 		this.player2 = new Player(playerName2);
 		
 		
+		//Deal our Deck
+		deal();
+		draw();
+		discard();
 		
+	/////JSP MAPPING//////	
 		
-		
-		//Deal Deck to players and create their decks//
-		
-
-		
-		
-		
-
-		// setting our attributes to be sent back to next fightWar JSP// 
-		
-		
-		if(action.equals("doPlay")){
-			url = "/fightRegular.jsp";
-		session.setAttribute("playerName1", this.player1.getPlayerName());
-		session.setAttribute("playerName2", this.player2.getPlayerName());
+		//Is this War?
+		if(warChallenge == true){
+			url = "/fightWar.jsp";
+			deal();
 		}
-		//session.setAttribute("playerScore2", this.player1.getPlayerScore());
-		//session.setAttribute("playerScore2", this.player2.getPlayerScore());
+		
+		
+		//We have a winner
+		else if(warWinner == true){
+			url = "/winner.jsp";
+		}
+		
+		//Regular Battle/Start
+		else{
+			url = "/fightRegular.jsp";
+			deal();
+		}
+		
 
 		
 		
-	    //Remember to test here tomorrow to see whats passing***
+	    //Remember to test here tomorrow to see whats passing in sessions***
+
+		session.setAttribute("player1", this.player1.getPlayerName());
+		session.setAttribute("player2", this.player2.getPlayerName());	
 		
+		
+		//session.setAttribute("War!", warChallenge);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url); 
 		dispatcher.forward(request, response); 
 		
-		}
+	}
+		
 
-	
-	
-	
-			
 
+		
 		
 			//Compare values of topcards
 
@@ -132,5 +142,27 @@ public class WarServlet extends HttpServlet implements Serializable {
 
 
 	}
+	
+	
+////Other Methods Needed/////
+	
+	private void discard() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+	private void draw() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void deal() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 	
 }

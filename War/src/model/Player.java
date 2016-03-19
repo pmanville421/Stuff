@@ -4,6 +4,7 @@
 package model;
 
 import java.io.Serializable;
+//import java.util.ArrayList;
 
 /**
  * @author plm12
@@ -17,7 +18,6 @@ public class Player implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String playerName;
-	private Deck playerHand;
 	private int playerScore;
 	/**
 	 * @param name
@@ -31,11 +31,11 @@ public class Player implements Serializable {
 	public Player(String playerName) {
 		this.playerName = playerName;
 		setPlayerScore (0);
-		playerHand = new Deck();
+		
 	}
     public Player(){
     	setPlayerScore (0);
-    	playerHand = new Deck();
+    	
     	
     }
 	/**
@@ -53,15 +53,11 @@ public class Player implements Serializable {
 	/**
 	 * @return the playerHand
 	 */
-	public Deck getPlayerHand() {
-		return playerHand;
-	}
+	
 	/**
 	 * @param playerHand the playerHand to set
 	 */
-	public void setPlayerHand(Deck playerHand) {
-		this.playerHand = playerHand;
-	}
+	
 	/**
 	 * @return the playerScore
 	 */
@@ -76,10 +72,6 @@ public class Player implements Serializable {
 	}
 
 	
-	public void getHand(Deck deck){
-		this.playerHand = deck;
-		
-	}
 	
 	
 	

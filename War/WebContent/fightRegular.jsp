@@ -15,5 +15,18 @@
 <div>${sessionScope.playerName2}</div>
 
 
+
+
+<div>
+	<form name="continueGame" action="doPlay" method="get">
+     <p>
+   
+   --Add fightWar
+   
+     </p>
+     </form>
+</div>
+
+
 </body>
 </html>
