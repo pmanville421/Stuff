@@ -22,13 +22,12 @@
 <p>
 <img class ="cards" src= "classic-cards/${player1TopCard}.png"/>
 </p>
-Cards Left: ${player1CardsLeft }
+	Cards Left: ${player1CardsLeft}
 <p>
-
- <b> ${sessionScope.player1}</b>
+	${sessionScope.player1}
 </p>
 <p>
-<b> Score:</b> ${sessionScope.playerScore1} 
+	Score:${sessionScope.playerScore1} 
 </p>
 
 </div>
@@ -38,14 +37,13 @@ Cards Left: ${player1CardsLeft }
 <p>
 <img class ="card-image" src= "classic-cards/${player2TopCard}.png">
 </p>
-Cards Left: ${player2CardsLeft }
+	Cards Left: ${player2CardsLeft }
 <p>
-
- <b> ${sessionScope.player2}</b>
+	${sessionScope.player2}
 </p>
 
 <p>
-<b> Score:</b> ${sessionScope.playerScore2} 
+	Score:${sessionScope.playerScore2} 
 </p>
 
 </div>
@@ -56,8 +54,14 @@ Cards Left: ${player2CardsLeft }
 		
 <div class="footer">
 	
+	<%boolean warStart = ((Boolean)session.getAttribute("warStart")).booleanValue();
+			if(warStart){%>
+				 <input type="submit" name="warStart" value= "Prepare For War!">
+			
+			<%}else{%>
+	
 		<p class="submit"><input type="submit" name="continue" value="Continue"></p>
-		
+		<%} %>
 </div>
 </form>
 

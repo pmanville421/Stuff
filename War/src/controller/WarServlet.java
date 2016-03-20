@@ -88,7 +88,7 @@ public class WarServlet extends HttpServlet implements Serializable {
 		
 		
 		//If war happens
-		if(warStart  == true){
+		if(warStart){
 				url = "/fightWar.jsp";
 				playGame();
 				session.setAttribute("warDeckPlayer1", warDeckPlayer1);
@@ -160,11 +160,6 @@ public class WarServlet extends HttpServlet implements Serializable {
 	
 	
 	
-	
-	
-	
-	
-	
 ////***GAME PLAY METHODS NEEDED***/////
 	
 	
@@ -215,7 +210,7 @@ public class WarServlet extends HttpServlet implements Serializable {
 		
 		
 		//We Have War
-		else if(warStart == true){
+		else if(warStart){
 			int cardsLeftPlayer1;
 			int cardsLeftPlayer2;
 			int warWinnings = 0;

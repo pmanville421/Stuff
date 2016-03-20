@@ -11,6 +11,10 @@
 <title>Winner!</title>
 </head>
 <body>
-
+<h1><span style="color:#0066ff">THIS</span> IS WAR! (<span style="color:#0066ff">The Card Game</span>)</h1>
+<div class="img"><img src="classic-cards/background.jpg" alt="background"></div>
+<p>
+The WINNER is: ${gameWinner}
+</p>
 </body>
 </html>
