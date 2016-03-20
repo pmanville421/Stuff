@@ -32,16 +32,26 @@ img {
 }
 
 
-.footer{
+
+
+#red {
 	
+	color:white;
+	border-style:solid;
+	border-color:red;
+    float:right;
+    text-align: center;
+	border:2px;
 }
 
 
-
-div.blue {
-    background-color: lightgrey;
-    width: 300px;
-    padding: 25px;
-    border: 25px solid navy;
-    margin: 25px;
+#blue{
+	
+	color:white;
+	border-style:solid;
+	border-color:blue;
+	text-align: center;
+	float:left;
+	border:2px;
+	
 }

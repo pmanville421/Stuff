@@ -15,21 +15,54 @@
 <body>
 <h1><span style="color:#0066ff">THIS</span> IS WAR! (<span style="color:#0066ff">The Card Game</span>)</h1>
 
+<div class="img"><img src="classic-cards/background.jpg" alt="background"></div>
 
 
+<div id ="blue">
+<p>
+<img class ="cards" src= "classic-cards/${player1TopCard}.png"/>
+</p>
+Cards Left: ${player1CardsLeft }
+<p>
 
+ <b> ${sessionScope.player1}</b>
+</p>
+<p>
+<b> Score:</b> ${sessionScope.playerScore1} 
+</p>
 
-
-<div>
-	<form name="continueGame" action="doPlay" method="get">
-     
-   
-   
-   
-     
-     </form>
 </div>
 
+
+<div id ="red">
+<p>
+<img class ="card-image" src= "classic-cards/${player2TopCard}.png">
+</p>
+Cards Left: ${player2CardsLeft }
+<p>
+
+ <b> ${sessionScope.player2}</b>
+</p>
+
+<p>
+<b> Score:</b> ${sessionScope.playerScore2} 
+</p>
+
+</div>
+
+<div align="center" style="margin-top: 50px;">
+ 
+ <form name="playGame" action="doPlay" method="post">
+		
+<div class="footer">
+	
+		<p class="submit"><input type="submit" name="continue" value="Continue"></p>
+		
+</div>
+</form>
+
+     
+</div> 
 
 </body>
 </html>
