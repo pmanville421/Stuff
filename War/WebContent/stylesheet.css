@@ -38,3 +38,10 @@ img {
 
 
 
+div.blue {
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}

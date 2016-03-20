@@ -140,9 +140,10 @@ public class Deck implements Serializable {
 	/**
 	 * @param index
 	 * removes a card at a given location of the deck
+	 * @return 
 	 */	
-	public void removeCard(int index){
-		cards.remove(index);
+	public Card removeCard(int index){
+		return cards.remove(index);
 	}
 	
 	/**
@@ -174,6 +175,7 @@ public class Deck implements Serializable {
 		int value = 0;
 		String suit = "";
 		String deckString = "12S,5D,10S,1S,3C,3D,12D,10D,7S,6C,8S,9D,11D,7C,13S,13H,1C,8D,7H,11H,2C,9H,9S,9C,6S,2H,6D,2S,5C,3H,10C,5H,7D,4C,2D,10H,8C,13C,1D,12C,11S,4H,12H,6H,1H,8H,4D,4S,11C,5S,3S,13D,";
+		//String deckString ="12S, 5D, 10S, 1S, 3C, 3D";
 		String[] cards = deckString.split(",");
 		// 
 		for (int i=0; i<cards.length; i++){
@@ -206,6 +208,10 @@ public class Deck implements Serializable {
 		return null;
 	}
 
-
+	public void addCard(Card card) {
+		// TODO Auto-generated method stub
+		cards.add(card);
+	}
+ 
 	
 }
