@@ -1,0 +1,8 @@
+<c:if>
+<c:out>
+<c:forEach>
+<c:forTokens>
+<c:import>
+2 more core tags of your choice
+4 fmt tags of your choice
+3 fn tags of your choice
