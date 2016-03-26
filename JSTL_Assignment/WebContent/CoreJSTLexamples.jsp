@@ -11,8 +11,10 @@
 <body>
 <h1><span style="color:red">Core JSTL</span></h1>
 <h2>
-Example of forEach, if, and out. <br />
-(11 reference from <span style="color:blue"><em>"This is Spinal Tap"</em></span> lol)
+Example of forEach, if, and out (featuring import). <br />
+(11 reference from <span style="color:blue"><em>"This is Spinal Tap"</em></span> lol)<br />
+<c:import url="/importJSTL1.html"/>
+
 </h2>
 <c:forEach var="i" begin="1" end="11">
 Guitar Amp Volume: 
@@ -22,7 +24,10 @@ Guitar Amp Volume:
 <c:out value="${i}"/><p></p>
 </c:forEach>
 <br />
-<h2>Example of forTokens</h2>
+
+<c:import url="/importJSTL.html"/>
+
+<h2>Example of forTokens (featuring import).</h2>
 <h3>Who are the founding members of the Justice League?</h3>
 <c:forTokens items="Superman,Batman,WonderWoman,Flash,GreenLantern,MartianManhunter,Hawkgirl" delims="," var="JusticeLeague">
 <c:out value="${JusticeLeague}"/> <p>
