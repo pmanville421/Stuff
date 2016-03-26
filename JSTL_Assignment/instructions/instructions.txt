@@ -7,13 +7,19 @@ Your application should include the following requirements:
 Import the jstl jar files into your Eclipse project
 Use the appropriate <taglib> tags in your JSPs.
 Provide examples of the following JSTL tags:
-<c:if>
-<c:out>
-<c:forEach>
-<c:forTokens>
+
+
 <c:import>
-2 more core tags of your choice
+<c:otherwise>
+<c:redirect>
+
+
+
 4 fmt tags of your choice
+
+
+
+
 3 fn tags of your choice
 Notes: You may combine some of the tags into one example. You must provide different examples than those shown in any of the module content.
 

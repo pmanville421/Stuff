@@ -54,14 +54,14 @@
 		
 <div class="footer">
 	
-	<%boolean warStart = ((Boolean)session.getAttribute("warStart")).booleanValue();
-			if(warStart){%>
-				 <input type="submit" name="warStart" value= "Prepare For War!">
+<%boolean warStart = ((Boolean)session.getAttribute("warStart")).booleanValue();
+	if(warStart){%>
+		<input type="submit" name="warStart" value= "Prepare For War!">
 			
 			<%}else{%>
-	
+			
 		<p class="submit"><input type="submit" name="continue" value="Continue"></p>
-		<%} %>
+	<%} %>
 </div>
 </form>
 
