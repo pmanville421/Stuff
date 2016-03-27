@@ -22,7 +22,7 @@
    		</li>
    		
    		<li>
-    		<a href=FunctionJSTLexamples.jsp> Core JSTL Tags</a>
+    		<a href=FunctionJSTLexamples.jsp> Functions JSTL Tags</a>
    		</li>
    </ul>
 </body>

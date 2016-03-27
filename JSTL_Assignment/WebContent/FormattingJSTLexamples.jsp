@@ -10,7 +10,8 @@
 <link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 <body>
-<h1>Examples Formatting</h1>
+<h1><span style="color:red">Formatting JSTL</span></h1>
+
 <h2>formatNumber, setLocale, parseNumber</h2>
 <c:set var="paid" value="421.87" />
 <fmt:formatNumber type="percent" maxIntegerDigits="2" value="${paid}" />
