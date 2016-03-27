@@ -9,11 +9,6 @@ Use the appropriate <taglib> tags in your JSPs.
 Provide examples of the following JSTL tags:
 
 
-<c:import>
-<c:otherwise>
-<c:redirect>
-
-
 
 4 fmt tags of your choice
 
