@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Core JSTL</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 <body>
 <h1><span style="color:red">Core JSTL</span></h1>
