@@ -13,7 +13,7 @@
 <h1><span style="color:red">Function JSTL</span></h1>
 
 
-<h2>contains, containsIgnoreCase, </h2>
+<h2>contains, containsIgnoreCase, endsWith</h2>
 <c:set var="BatmanVsSuperman" value="Dawn of Justice"/>
 
 <c:if test="${fn:contains(BatmanVsSuperman, 'Justice')}">
