@@ -80,6 +80,13 @@ public class Book {
 		public void setPages(int pages) {
 			this.pages = pages;
 		}
+		/* (non-Javadoc)
+		 * @see java.lang.Object#toString()
+		 */
+		@Override
+		public String toString() {
+			return "Book [bookID=" + bookID + ", title=" + title + ", author=" + author + ", pages=" + pages + "]";
+		}
 		
 		
 }
