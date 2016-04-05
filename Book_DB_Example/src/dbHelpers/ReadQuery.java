@@ -69,13 +69,13 @@ public class ReadQuery {
 				
 				table += "<tr>";
 					table += "<td>";
-						book.getTitle();
+					table += book.getTitle();
 					table += "</td>";
 					table += "<td>";
-						book.getAuthor();
+					table += book.getAuthor();
 					table += "</td>";
 					table += "<td>";
-						book.getPages();
+					table += book.getPages();
 					table += "</td>";
 							table += "<a href=update?bookID=" + book.getBookID() + ">update</a> <a href=delete?bookID=" + book.getBookID()+ ">delete</a>";
 				table += "</tr>";
