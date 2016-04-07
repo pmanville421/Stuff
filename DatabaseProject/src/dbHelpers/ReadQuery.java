@@ -65,12 +65,32 @@ public class ReadQuery {
 		try {
 			while(this.results.next()){
 				Item item = new Item();
-				item.setSku(sku);
-				item.setProductType(productType);
-				item.setFlavor(flavor);
-				item.setCost(cost);
-				item.setPrice(price);
-				item.setQuantity(quantity);
+				item.setSku(this.results.getString("sku"));
+				item.setProductType(this.results.getString("productType"));
+				item.setFlavor(this.results.getString("flavor"));
+				item.setCost(this.results.getDouble("cost"));
+				item.setPrice(this.results.getDouble("price"));
+				item.setQuantity(this.results.getInt("quantity"));
+				
+				table += "<tr>";
+					table += "<td>";
+					table += item.getSku();
+					table += "</td>";
+					table += "<td>";
+					table += item.getProductType();
+					table += "</td>";
+					table += "<td>";
+					table += item.getFlavor();
+					table += "</td>";
+					table += "<td>";
+					table += item.getCost();
+					table += "</td>";
+					table += "<td>";
+					table += item.getPrice();
+					table += "</td>";
+					table += "<td>";
+					table += item.getQuantity();
+					table += "</td>";
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
