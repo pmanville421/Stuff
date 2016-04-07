@@ -91,6 +91,9 @@ public class ReadQuery {
 					table += "<td>";
 					table += item.getQuantity();
 					table += "</td>";
+					
+					//Add and Delete
+						table += "<a href=update?sku=" + item.getSku() + ">update</a><a href=delete?sku=" + item.getSku() + ">delete</a>";
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
