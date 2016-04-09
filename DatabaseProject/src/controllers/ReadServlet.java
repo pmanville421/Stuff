@@ -14,7 +14,7 @@ import dbHelpers.ReadQuery;
 /**
  * Servlet implementation class ReadServlet
  */
-@WebServlet(description = "This servlet is for read queries", urlPatterns = {"/ReadServlet", "/read" })
+@WebServlet(description = "This servlet is for read queries", urlPatterns = {"/ReadServlet", "/read"})
 public class ReadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -40,11 +40,13 @@ public class ReadServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 		
 		
 		//Create ReadQuery helper object
 		ReadQuery rq = new ReadQuery("grocery", "root", "wolf");
+		
+		//Get the table
+		rq.doRead();
 		String table = rq.getHTMLtable();
 		
 		//Pass execution control to read.jsp along with the table

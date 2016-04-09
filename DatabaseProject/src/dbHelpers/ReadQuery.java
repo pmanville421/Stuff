@@ -46,11 +46,11 @@ public class ReadQuery {
 	
 	//doRead method and preparing our query
 	public void doRead(){
-		String query = "select * from grocery";
+		String query = "select * from products";
 		
 		try {
-			PreparedStatement rs = this.connection.prepareStatement(query);
-			this.results = rs.executeQuery();
+			PreparedStatement ps = this.connection.prepareStatement(query);
+			this.results = ps.executeQuery();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -91,9 +91,10 @@ public class ReadQuery {
 					table += "<td>";
 					table += item.getQuantity();
 					table += "</td>";
-					
+					table += "<td>";
 					//Add and Delete
-						table += "<a href=update?sku=" + item.getSku() + ">update</a><a href=delete?sku=" + item.getSku() + ">delete</a>";
+						table += "<a href=update?sku=" + item.getSku() + ">update</a> <a href=delete?sku=" + item.getSku() + ">delete</a>";
+					table += "</td>";
 					table += "</tr>";
 			}
 		} catch (SQLException e) {
