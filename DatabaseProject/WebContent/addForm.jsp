@@ -11,17 +11,7 @@
 
 <form name=addForm action=addItem method=get>
 	
-	<label>
-	Product SKU:
-	</label>
-	<input type=text name=title value="" />
-	<br />
 	
-	<label>
-	Product SKU:
-	</label>
-	<input type=text name=title value="" />
-	<br />
 	
 	<label>
 	Product SKU:
