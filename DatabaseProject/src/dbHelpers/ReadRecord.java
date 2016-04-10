@@ -30,7 +30,7 @@ public class ReadRecord {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			this.connection = DriverManager.getConnection(url);
+			this.connection = DriverManager.getConnection(url, uname, pwd);
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
