@@ -19,7 +19,7 @@
 	<label>
 	Product SKU:
 	</label>
-	<input type=text name=sku value="<%= item.getSku() %>" disabled/>
+	<input type=text name=sku value="<%= item.getSku() %>" />
 	<br />
 	
 	<label>
