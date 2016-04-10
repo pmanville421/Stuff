@@ -17,10 +17,7 @@ import dbHelpers.DeleteQuery;
  */
 @WebServlet(
 		description = "Deletes a record using an item sku", 
-		urlPatterns = { 
-				"/DeleteServlet", 
-				"/delete"
-		})
+		urlPatterns = {"/delete"})
 public class DeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -38,7 +35,7 @@ public class DeleteServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		doPost(request, response);
+		this.doPost(request, response);
 	}
 
 	/**

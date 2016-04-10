@@ -93,7 +93,7 @@ public class ReadQuery {
 					table += "</td>";
 					table += "<td>";
 					//Add and Delete
-						table += "<a href=update?sku=" + item.getSku() + ">update</a> <a href=delete?sku=" + item.getSku() + ">delete</a>";
+						table += "<a href=update?sku=" + item.getSku() + " >update</a> <a href=delete?sku=" + item.getSku() + ">delete</a>";
 					table += "</td>";
 					table += "</tr>";
 			}

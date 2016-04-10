@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Grocery Store List</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 <body>
 <h1>Grocery Store List</h1>

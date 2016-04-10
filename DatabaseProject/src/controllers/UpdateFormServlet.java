@@ -17,10 +17,7 @@ import model.Item;
  */
 @WebServlet(
 		description = "This will get the item and use the data to fill in a table for updating a record", 
-		urlPatterns = { 
-				"/UpdateFormServlet", 
-				"/update"
-		})
+		urlPatterns = {"/update"})
 public class UpdateFormServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
